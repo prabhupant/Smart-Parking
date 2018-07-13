@@ -106,6 +106,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
     <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\scipt.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,8 +123,8 @@
     <Content Include="Views\ParkingManagementSystem\Index.cshtml" />
     <Content Include="Views\ParkingManagementSystem\ParkingSpotForm.cshtml" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
-    <Content Include="Views\ParkingManagementSystem\Thanks.cshtml" />
     <Content Include="Views\ParkingManagementSystem\CheckOutForm.cshtml" />
+    <Content Include="Views\ParkingManagementSystem\Thanks.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

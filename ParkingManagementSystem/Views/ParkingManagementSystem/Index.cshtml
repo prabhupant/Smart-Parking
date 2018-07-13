@@ -1,6 +1,6 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+       /**/
+       Layout = null;
 }
 
 <!DOCTYPE html>
@@ -15,6 +15,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script language="javascript" type="text/javascript" src="~/Scripts/scipt.js"></script>
+
 <style>
     body, h1, h2, h3, h4, h5, h6 {
         font-family: "Lato", sans-serif
@@ -62,36 +64,36 @@
                 <h5 class="w3-padding-32">Parking Slot Selector</h5>
 
                 <p>
-                    <button class="pbutton">PS 1</button>
-                    <button class="pbutton">PS 2</button>
-                    <button class="pbutton">PS 3</button>
-                    <button class="pbutton">PS 4</button>
-                    <button class="pbutton">PS 5</button>
-                    <button class="pbutton">PS 6</button>
-                    <button class="pbutton">PS 7</button>
-                    <button class="pbutton">PS 8</button>
-                    <button class="pbutton">PS 9</button>
-                    <button class="pbutton">PS 10</button>
-                    <button class="pbutton">PS 11</button>
-                    <button class="pbutton">PS 12</button>
-                    <button class="pbutton">PS 13</button>
-                    <button class="pbutton">PS 14</button>
-                    <button class="pbutton">PS 15</button>
-                    <button class="pbutton">PS 16</button>
-                    <button class="pbutton">PS 17</button>
-                    <button class="pbutton">PS 18</button>
-                    <button class="pbutton">PS 19</button>
-                    <button class="pbutton">PS 20</button>
-                    <button class="pbutton">PS 21</button>
-                    <button class="pbutton">PS 22</button>
-                    <button class="pbutton">PS 23</button>
-                    <button class="pbutton">PS 24</button>
-                    <button class="pbutton">PS 25</button>
-                    <button class="pbutton">PS 26</button>
-                    <button class="pbutton">PS 27</button>
-                    <button class="pbutton">PS 28</button>
-                    <button class="pbutton">PS 29</button>
-                    <button class="pbutton">PS 30</button>
+                    <button class="pbutton" id="ps1" onclick="clickFunction('ps1')">@Html.ActionLink("PS 1", "ParkingSpotForm")</button>                   
+                    <button class="pbutton" id="ps2" onclick="clickFunction('ps2')">@Html.ActionLink("PS 2", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps3" onclick="clickFunction('ps3')">@Html.ActionLink("PS 3", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps4" onclick="clickFunction('ps4')">@Html.ActionLink("PS 4", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps5" onclick="clickFunction('ps5')">@Html.ActionLink("PS 5", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps6" onclick="clickFunction('ps6')">@Html.ActionLink("PS 6", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps7" onclick="clickFunction('ps7')">@Html.ActionLink("PS 7", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps8" onclick="clickFunction('ps8')">@Html.ActionLink("PS 8", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps9" onclick="clickFunction('ps9')">@Html.ActionLink("PS 9", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps10" onclick="clickFunction('ps10')">@Html.ActionLink("PS 10", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps11" onclick="clickFunction('ps11')">@Html.ActionLink("PS 11", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps12" onclick="clickFunction('ps12')">@Html.ActionLink("PS 12", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps13" onclick="clickFunction('ps13')">@Html.ActionLink("PS 13", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps14" onclick="clickFunction('ps14')">@Html.ActionLink("PS 14", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps15" onclick="clickFunction('ps15')">@Html.ActionLink("PS 15", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps16" onclick="clickFunction('ps16')">@Html.ActionLink("PS 16", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps17" onclick="clickFunction('ps17')">@Html.ActionLink("PS 17", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps18" onclick="clickFunction('ps18')">@Html.ActionLink("PS 18", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps19" onclick="clickFunction('ps19')">@Html.ActionLink("PS 19", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps20" onclick="clickFunction('ps20')">@Html.ActionLink("PS 20", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps21" onclick="clickFunction('ps21')">@Html.ActionLink("PS 21", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps22" onclick="clickFunction('ps22')">@Html.ActionLink("PS 22", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps23" onclick="clickFunction('ps23')">@Html.ActionLink("PS 23", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps24" onclick="clickFunction('ps24')">@Html.ActionLink("PS 24", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps25" onclick="clickFunction('ps25')">@Html.ActionLink("PS 25", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps26" onclick="clickFunction('ps26')">@Html.ActionLink("PS 26", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps27" onclick="clickFunction('ps27')">@Html.ActionLink("PS 27", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps28" onclick="clickFunction('ps28')">@Html.ActionLink("PS 28", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps29" onclick="clickFunction('ps29')">@Html.ActionLink("PS 29", "ParkingSpotForm")</button>
+                    <button class="pbutton" id="ps30" onclick="clickFunction('ps30')">@Html.ActionLink("PS 30", "ParkingSpotForm")</button>
 
 
                 </p>
@@ -120,15 +122,15 @@
     </footer>
 
     <script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
     </script>
 
 </body>
