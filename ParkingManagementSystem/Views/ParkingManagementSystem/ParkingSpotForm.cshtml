@@ -8,11 +8,40 @@
 
 <html>
 <head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width" />
     <title>ParkingSpotForm</title>
 </head>
 <body>
-    <div> 
-    </div>
+    <div class="panel panel-success">
+         <div class="panel-heading text-center"><h4>Parking Slot Form</h4></div>
+         <div class="panel-body">
+             @using (Html.BeginForm())
+             {
+                 @Html.ValidationSummary()
+                 <div class="form-group">
+                     <label>Name:</label>
+                     @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                 </div>
+                 <div class="form-group">
+                     <label>Phone:</label>
+                     @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                 </div>
+                 <div class="form-group">
+                     <label>Vehicle Number:</label>
+                     @Html.TextBoxFor(x => x.VehicleNumber, new { @class = "form-control" })
+                 </div>
+                 <div class="form-group">
+                     <label>Unique ID:</label>
+                     @Html.TextBoxFor(x => x.UID, new { @class = "form-control" })
+                 </div>
+
+             }
+             </div>
+        </div>
+             <div class="text-center">
+                 <input class="btn btn-success" type="submit" value="Submit"/>
+             </div>
 </body>
 </html>
