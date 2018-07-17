@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParkingManagementSystem.Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customers_Table">
+    <Key>
+      <PropertyRef Name="ParkingSlotNumber" />
+    </Key>
+    <Property Name="ParkingSlotNumber" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="VehicleNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="UID" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ParkingTime" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ParkingManagementSystemModelsStoreContainer">
+    <EntitySet Name="Customers_Table" EntityType="Self.Customers_Table" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ParkingManagementSystemModelsStoreContainer" CdmEntityContainer="DatabasePMSEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="ParkingManagementSystem.Models.Customer">
+        <MappingFragment StoreEntitySet="Customers_Table">
+          <ScalarProperty Name="ParkingSlotNumber" ColumnName="ParkingSlotNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VehicleNumber" ColumnName="VehicleNumber" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="ParkingTime" ColumnName="ParkingTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

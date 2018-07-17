@@ -21,6 +21,10 @@
              {
                  @Html.ValidationSummary()
                  <div class="form-group">
+                     <label>Parking Slot Number:</label>
+                     @Html.TextBoxFor(x => x.ParkingSlotNumber, new { @class = "form-control" })
+                 </div>
+                 <div class="form-group">
                      <label>Name:</label>
                      @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
                  </div>
@@ -36,12 +40,16 @@
                      <label>Unique ID:</label>
                      @Html.TextBoxFor(x => x.UID, new { @class = "form-control" })
                  </div>
-
+                 <div class="form-group">
+                     <label>Parking Time:</label>
+                     @Html.TextBoxFor(x => x.ParkingTime, new { @class = "form-control" })
+                 </div>
+                 <div class="text-center">
+                     <input class="btn btn-success" type="submit" value="Submit" />
+                 </div>
              }
-             </div>
+         </div>
         </div>
-             <div class="text-center">
-                 <input class="btn btn-success" type="submit" value="Submit"/>
-             </div>
+             
 </body>
 </html>

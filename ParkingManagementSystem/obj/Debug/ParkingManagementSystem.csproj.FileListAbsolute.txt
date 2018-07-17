@@ -69,3 +69,7 @@ C:\Final Projects\ParkingManagementSystem\ParkingManagementSystem\obj\Debug\Park
 C:\Final Projects\ParkingManagementSystem\ParkingManagementSystem\obj\Debug\ParkingManagementSystem.csproj.CopyComplete
 C:\Final Projects\ParkingManagementSystem\ParkingManagementSystem\obj\Debug\ParkingManagementSystem.dll
 C:\Final Projects\ParkingManagementSystem\ParkingManagementSystem\obj\Debug\ParkingManagementSystem.pdb
+C:\Final Projects\ParkingManagementSystem\ParkingManagementSystem\bin\EntityFramework.dll
+C:\Final Projects\ParkingManagementSystem\ParkingManagementSystem\bin\EntityFramework.SqlServer.dll
+C:\Final Projects\ParkingManagementSystem\ParkingManagementSystem\bin\EntityFramework.xml
+C:\Final Projects\ParkingManagementSystem\ParkingManagementSystem\bin\EntityFramework.SqlServer.xml
