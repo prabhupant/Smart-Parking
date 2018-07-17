@@ -1,0 +1,50 @@
+if (slotId >= 1 && slotId <= 10)
+{
+        if(n>1)
+        {
+            fare = 20; x = 0;
+            while(h > 0)
+            {
+                fare = fare + x*10;
+                h--;
+                x++;
+            }
+            fare = (50/100) * fare;
+        }
+        else
+        {
+            fare = (50/100) * fare;
+        }
+}
+
+else if(slotId > 10 && slotId <= 20)
+{
+        fare = 10; x = 0;
+        if(h>1)
+        {
+            while(h>0)
+            {
+                fare = fare + x*5;
+                h--;
+                x++;
+            }
+        }
+}
+
+else if(slotId > 20 && slotId <=50)
+{
+        fare = 20; x = 0;
+        if(h>1)
+        {
+            while(h>0)
+            {
+                fare = fare + x*10;
+                h--;
+                x++;
+            }
+        }
+        else
+        {
+            fare = 20;
+        }
+}
