@@ -19,17 +19,19 @@
         <div class="panel-body">
             @using (Html.BeginForm())
             {
-                @Html.ValidationSummary()
+                
                 <div class="form-group">
                     <label>Parking Slot Number:</label>
                     @Html.TextBoxFor(x => x.ParkingSlotNumber, new { @class = "form-control" })
-                </div>              
+                </div>
 
+                <div class="text-center">
+                    <input class="btn btn-success" type="submit" value="Submit to generate fare" />
+                </div>
             }
+
         </div>
     </div>
-    <div class="text-center">
-        <input class="btn btn-success" type="submit" value="Submit to generate fare" />
-    </div>
+    
 </body>
 </html>

@@ -19,7 +19,9 @@ namespace ParkingManagementSystem.Models
         [Required(ErrorMessage = "Please enter your UID")]
         public string UID { get; set; }
 
-        public string ParkingSlotNumber { get; set; }
-        public string ParkingTime { get; set; }
+        public int ParkingSlotNumber { get; set; }
+        //public string ParkingTime { get; set; }
+
+        public double fare { get; set; }
     }
 }

@@ -61,42 +61,70 @@
         <div class="w3-content">
             <div class="w3-twothird">
                 <h1>Parking Slot Selector</h1>
-                <h5 class="w3-padding-32">Parking Slot Selector</h5>
+                <h5 class="w3-padding-32">Handicapped Parking</h5>
 
                 <p>
-                    <button class="pbutton" id="ps1" onclick="clickFunction('ps1')">@Html.ActionLink("PS 1", "ParkingSpotForm")</button>                   
-                    <button class="pbutton" id="ps2" onclick="clickFunction('ps2')">@Html.ActionLink("PS 2", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps3" onclick="clickFunction('ps3')">@Html.ActionLink("PS 3", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps4" onclick="clickFunction('ps4')">@Html.ActionLink("PS 4", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps5" onclick="clickFunction('ps5')">@Html.ActionLink("PS 5", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps6" onclick="clickFunction('ps6')">@Html.ActionLink("PS 6", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps7" onclick="clickFunction('ps7')">@Html.ActionLink("PS 7", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps8" onclick="clickFunction('ps8')">@Html.ActionLink("PS 8", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps9" onclick="clickFunction('ps9')">@Html.ActionLink("PS 9", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps10" onclick="clickFunction('ps10')">@Html.ActionLink("PS 10", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps11" onclick="clickFunction('ps11')">@Html.ActionLink("PS 11", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps12" onclick="clickFunction('ps12')">@Html.ActionLink("PS 12", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps13" onclick="clickFunction('ps13')">@Html.ActionLink("PS 13", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps14" onclick="clickFunction('ps14')">@Html.ActionLink("PS 14", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps15" onclick="clickFunction('ps15')">@Html.ActionLink("PS 15", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps16" onclick="clickFunction('ps16')">@Html.ActionLink("PS 16", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps17" onclick="clickFunction('ps17')">@Html.ActionLink("PS 17", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps18" onclick="clickFunction('ps18')">@Html.ActionLink("PS 18", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps19" onclick="clickFunction('ps19')">@Html.ActionLink("PS 19", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps20" onclick="clickFunction('ps20')">@Html.ActionLink("PS 20", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps21" onclick="clickFunction('ps21')">@Html.ActionLink("PS 21", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps22" onclick="clickFunction('ps22')">@Html.ActionLink("PS 22", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps23" onclick="clickFunction('ps23')">@Html.ActionLink("PS 23", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps24" onclick="clickFunction('ps24')">@Html.ActionLink("PS 24", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps25" onclick="clickFunction('ps25')">@Html.ActionLink("PS 25", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps26" onclick="clickFunction('ps26')">@Html.ActionLink("PS 26", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps27" onclick="clickFunction('ps27')">@Html.ActionLink("PS 27", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps28" onclick="clickFunction('ps28')">@Html.ActionLink("PS 28", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps29" onclick="clickFunction('ps29')">@Html.ActionLink("PS 29", "ParkingSpotForm")</button>
-                    <button class="pbutton" id="ps30" onclick="clickFunction('ps30')">@Html.ActionLink("PS 30", "ParkingSpotForm")</button>
-
-
+                    <button class="pbutton" id="ps1" onclick="clickFunction('ps1')">@Html.ActionLink("PS 1", "ParkingSpotForm", "ParkingManagementSystem", new { id = 1 }, null)</button>
+                    <button class="pbutton" id="ps2" onclick="clickFunction('ps2')">@Html.ActionLink("PS 2", "ParkingSpotForm", "ParkingManagementSystem", new { id = 2 }, null)</button>
+                    <button class="pbutton" id="ps3" onclick="clickFunction('ps3')">@Html.ActionLink("PS 3", "ParkingSpotForm", "ParkingManagementSystem", new { id = 3 }, null)</button>
+                    <button class="pbutton" id="ps4" onclick="clickFunction('ps4')">@Html.ActionLink("PS 4", "ParkingSpotForm", "ParkingManagementSystem", new { id = 4 }, null)</button>
+                    <button class="pbutton" id="ps5" onclick="clickFunction('ps5')">@Html.ActionLink("PS 5", "ParkingSpotForm", "ParkingManagementSystem", new { id = 5 }, null)</button>
+                    <button class="pbutton" id="ps6" onclick="clickFunction('ps6')">@Html.ActionLink("PS 6", "ParkingSpotForm", "ParkingManagementSystem", new { id = 6 }, null)</button>
+                    <button class="pbutton" id="ps7" onclick="clickFunction('ps7')">@Html.ActionLink("PS 7", "ParkingSpotForm", "ParkingManagementSystem", new { id = 7 }, null)</button>
+                    <button class="pbutton" id="ps8" onclick="clickFunction('ps8')">@Html.ActionLink("PS 8", "ParkingSpotForm", "ParkingManagementSystem", new { id = 8 }, null)</button>
+                    <button class="pbutton" id="ps9" onclick="clickFunction('ps9')">@Html.ActionLink("PS 9", "ParkingSpotForm", "ParkingManagementSystem", new { id = 9 }, null)</button>
+                    <button class="pbutton" id="ps10" onclick="clickFunction('ps10')">@Html.ActionLink("PS 10", "ParkingSpotForm", "ParkingManagementSystem", new { id = 10 }, null)</button>
                 </p>
+
+                <h5 class="w3-padding-32">2 Wheeler Parking</h5>
+                <p>
+                    <button class="pbutton" id="ps11" onclick="clickFunction('ps11')">@Html.ActionLink("PS 11", "ParkingSpotForm", "ParkingManagementSystem", new { id = 11 }, null)</button>
+                    <button class="pbutton" id="ps12" onclick="clickFunction('ps12')">@Html.ActionLink("PS 12", "ParkingSpotForm", "ParkingManagementSystem", new { id = 12 }, null)</button>
+                    <button class="pbutton" id="ps13" onclick="clickFunction('ps13')">@Html.ActionLink("PS 13", "ParkingSpotForm", "ParkingManagementSystem", new { id = 13 }, null)</button>
+                    <button class="pbutton" id="ps14" onclick="clickFunction('ps14')">@Html.ActionLink("PS 14", "ParkingSpotForm", "ParkingManagementSystem", new { id = 14 }, null)</button>
+                    <button class="pbutton" id="ps15" onclick="clickFunction('ps15')">@Html.ActionLink("PS 15", "ParkingSpotForm", "ParkingManagementSystem", new { id = 15 }, null)</button>
+                    <button class="pbutton" id="ps16" onclick="clickFunction('ps16')">@Html.ActionLink("PS 16", "ParkingSpotForm", "ParkingManagementSystem", new { id = 16 }, null)</button>
+                    <button class="pbutton" id="ps17" onclick="clickFunction('ps17')">@Html.ActionLink("PS 17", "ParkingSpotForm", "ParkingManagementSystem", new { id = 17 }, null)</button>
+                    <button class="pbutton" id="ps18" onclick="clickFunction('ps18')">@Html.ActionLink("PS 18", "ParkingSpotForm", "ParkingManagementSystem", new { id = 18 }, null)</button>
+                    <button class="pbutton" id="ps19" onclick="clickFunction('ps19')">@Html.ActionLink("PS 19", "ParkingSpotForm", "ParkingManagementSystem", new { id = 19 }, null)</button>
+                    <button class="pbutton" id="ps20" onclick="clickFunction('ps20')">@Html.ActionLink("PS 20", "ParkingSpotForm", "ParkingManagementSystem", new { id = 20 }, null)</button>
+                </p>
+
+                <h5 class="w3-padding-32">4 Wheeler Parking</h5>
+                <p>
+                    <button class="pbutton" id="ps21" onclick="clickFunction('ps21')">@Html.ActionLink("PS 21", "ParkingSpotForm", "ParkingManagementSystem", new { id = 21 }, null)</button>
+                    <button class="pbutton" id="ps22" onclick="clickFunction('ps22')">@Html.ActionLink("PS 22", "ParkingSpotForm", "ParkingManagementSystem", new { id = 22 }, null)</button>
+                    <button class="pbutton" id="ps23" onclick="clickFunction('ps23')">@Html.ActionLink("PS 23", "ParkingSpotForm", "ParkingManagementSystem", new { id = 23 }, null)</button>
+                    <button class="pbutton" id="ps24" onclick="clickFunction('ps24')">@Html.ActionLink("PS 24", "ParkingSpotForm", "ParkingManagementSystem", new { id = 24 }, null)</button>
+                    <button class="pbutton" id="ps25" onclick="clickFunction('ps25')">@Html.ActionLink("PS 25", "ParkingSpotForm", "ParkingManagementSystem", new { id = 25 }, null)</button>
+                    <button class="pbutton" id="ps26" onclick="clickFunction('ps26')">@Html.ActionLink("PS 26", "ParkingSpotForm", "ParkingManagementSystem", new { id = 26 }, null)</button>
+                    <button class="pbutton" id="ps27" onclick="clickFunction('ps27')">@Html.ActionLink("PS 27", "ParkingSpotForm", "ParkingManagementSystem", new { id = 27 }, null)</button>
+                    <button class="pbutton" id="ps28" onclick="clickFunction('ps28')">@Html.ActionLink("PS 28", "ParkingSpotForm", "ParkingManagementSystem", new { id = 28 }, null)</button>
+                    <button class="pbutton" id="ps29" onclick="clickFunction('ps29')">@Html.ActionLink("PS 29", "ParkingSpotForm", "ParkingManagementSystem", new { id = 29 }, null)</button>
+                    <button class="pbutton" id="ps30" onclick="clickFunction('ps30')">@Html.ActionLink("PS 30", "ParkingSpotForm", "ParkingManagementSystem", new { id = 30 }, null)</button>
+                    <button class="pbutton" id="ps21" onclick="clickFunction('ps31')">@Html.ActionLink("PS 31", "ParkingSpotForm", "ParkingManagementSystem", new { id = 31 }, null)</button>
+                    <button class="pbutton" id="ps22" onclick="clickFunction('ps32')">@Html.ActionLink("PS 32", "ParkingSpotForm", "ParkingManagementSystem", new { id = 32 }, null)</button>
+                    <button class="pbutton" id="ps23" onclick="clickFunction('ps33')">@Html.ActionLink("PS 33", "ParkingSpotForm", "ParkingManagementSystem", new { id = 33 }, null)</button>
+                    <button class="pbutton" id="ps24" onclick="clickFunction('ps34')">@Html.ActionLink("PS 34", "ParkingSpotForm", "ParkingManagementSystem", new { id = 34 }, null)</button>
+                    <button class="pbutton" id="ps25" onclick="clickFunction('ps35')">@Html.ActionLink("PS 35", "ParkingSpotForm", "ParkingManagementSystem", new { id = 35 }, null)</button>
+                    <button class="pbutton" id="ps26" onclick="clickFunction('ps36')">@Html.ActionLink("PS 36", "ParkingSpotForm", "ParkingManagementSystem", new { id = 36 }, null)</button>
+                    <button class="pbutton" id="ps27" onclick="clickFunction('ps37')">@Html.ActionLink("PS 37", "ParkingSpotForm", "ParkingManagementSystem", new { id = 37 }, null)</button>
+                    <button class="pbutton" id="ps28" onclick="clickFunction('ps38')">@Html.ActionLink("PS 38", "ParkingSpotForm", "ParkingManagementSystem", new { id = 38 }, null)</button>
+                    <button class="pbutton" id="ps29" onclick="clickFunction('ps39')">@Html.ActionLink("PS 39", "ParkingSpotForm", "ParkingManagementSystem", new { id = 39 }, null)</button>
+                    <button class="pbutton" id="ps30" onclick="clickFunction('ps40')">@Html.ActionLink("PS 40", "ParkingSpotForm", "ParkingManagementSystem", new { id = 40 }, null)</button>
+                    <button class="pbutton" id="ps21" onclick="clickFunction('ps41')">@Html.ActionLink("PS 41", "ParkingSpotForm", "ParkingManagementSystem", new { id = 41 }, null)</button>
+                    <button class="pbutton" id="ps22" onclick="clickFunction('ps42')">@Html.ActionLink("PS 42", "ParkingSpotForm", "ParkingManagementSystem", new { id = 42 }, null)</button>
+                    <button class="pbutton" id="ps23" onclick="clickFunction('ps43')">@Html.ActionLink("PS 43", "ParkingSpotForm", "ParkingManagementSystem", new { id = 43 }, null)</button>
+                    <button class="pbutton" id="ps24" onclick="clickFunction('ps44')">@Html.ActionLink("PS 44", "ParkingSpotForm", "ParkingManagementSystem", new { id = 44 }, null)</button>
+                    <button class="pbutton" id="ps25" onclick="clickFunction('ps45')">@Html.ActionLink("PS 45", "ParkingSpotForm", "ParkingManagementSystem", new { id = 45 }, null)</button>
+                    <button class="pbutton" id="ps26" onclick="clickFunction('ps46')">@Html.ActionLink("PS 46", "ParkingSpotForm", "ParkingManagementSystem", new { id = 46 }, null)</button>
+                    <button class="pbutton" id="ps27" onclick="clickFunction('ps47')">@Html.ActionLink("PS 47", "ParkingSpotForm", "ParkingManagementSystem", new { id = 47 }, null)</button>
+                    <button class="pbutton" id="ps28" onclick="clickFunction('ps48')">@Html.ActionLink("PS 48", "ParkingSpotForm", "ParkingManagementSystem", new { id = 48 }, null)</button>
+                    <button class="pbutton" id="ps29" onclick="clickFunction('ps49')">@Html.ActionLink("PS 49", "ParkingSpotForm", "ParkingManagementSystem", new { id = 49 }, null)</button>
+                    <button class="pbutton" id="ps30" onclick="clickFunction('ps50')">@Html.ActionLink("PS 50", "ParkingSpotForm", "ParkingManagementSystem", new { id = 50 }, null)</button>
+                </p>
+
+                
             </div>
 
 

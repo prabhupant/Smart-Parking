@@ -175,6 +175,7 @@
     <Content Include="Scripts\jquery-1.9.0.min.map" />
     <Content Include="Views\ParkingManagementSystem\CheckOutForm.cshtml" />
     <Content Include="Views\ParkingManagementSystem\Thanks.cshtml" />
+    <Content Include="Views\ParkingManagementSystem\Final.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
