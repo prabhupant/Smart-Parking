@@ -1,50 +1,57 @@
-if (slotId >= 1 && slotId <= 10)
+int h = Int32.Parse(time.Substring(0, time.IndexOf(":")));
+int m = Int32.Parse(time.Substring(time.IndexOf(":")+1));
+
+if(userInfo.ParkingSlotNumber >= 1 && userInfo.ParkingSlotNumber <= 10)
 {
-        if(n>1)
-        {
-            fare = 20; x = 0;
-            while(h > 0)
-            {
-                fare = fare + x*10;
-                h--;
-                x++;
-            }
-            fare = (50/100) * fare;
-        }
-        else
-        {
-            fare = (50/100) * fare;
-        }
+	int fare = 20;
+	int x = 0;
+	
+	if(h>1)
+	{
+		while(h>0)
+		{
+			fare = fare + x*10;
+			h--;
+			x++;
+		}
+		fare = (m == 0) ? fare:fare+20;
+		fare = (50/100)*fare;
+	}
+	else
+	{
+		fare = (m == 0) ? fare:fare+20;
+		fare = (50/100) * fare;
+	}
 }
 
-else if(slotId > 10 && slotId <= 20)
+else if(userInfo.ParkingSlotNumber >= 11 && userInfo.ParkingSlotNumber <= 20)
 {
-        fare = 10; x = 0;
-        if(h>1)
-        {
-            while(h>0)
-            {
-                fare = fare + x*5;
-                h--;
-                x++;
-            }
-        }
+	int fare = 10;
+	int x = 0;
+	
+	if(h>1)
+	{
+		while(h>0)
+		{
+			fare = fare + x*5;
+			h--;
+			x++;
+		}
+	}
+	fare = (m == 0) ? fare:fare+20;
 }
-
-else if(slotId > 20 && slotId <=50)
+else
 {
-        fare = 20; x = 0;
-        if(h>1)
-        {
-            while(h>0)
-            {
-                fare = fare + x*10;
-                h--;
-                x++;
-            }
-        }
-        else
-        {
-            fare = 20;
-        }
+	int fare = 20;
+	int x = 0;
+	if(h>1)
+	{
+		while(h>0)
+		{
+			fare = fare + x*10;
+			h--;
+			x++;
+		}
+	}
+	fare = (m == 0) ? fare:fare+20;
 }
