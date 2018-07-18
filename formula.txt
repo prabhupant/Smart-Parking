@@ -38,7 +38,7 @@ else if(userInfo.ParkingSlotNumber >= 11 && userInfo.ParkingSlotNumber <= 20)
 			x++;
 		}
 	}
-	fare = (m == 0) ? fare:fare+20;
+	fare = (m == 0) ? fare:fare+10;
 }
 else
 {
