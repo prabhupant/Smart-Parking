@@ -88,21 +88,12 @@ namespace ParkingManagementSystem.Controllers
                     string query = "SELECT * FROM Customers_Table WHERE ParkingSlotNumber = " + userInfo.ParkingSlotNumber;
                     SqlCommand cmd = new SqlCommand(query, con);
 
-                    string query2 = "INSERT INTO Customers_Table(EndTime) VALUES(CURRENT_TIMESTAMP) WHERE ParkingSlotNumber = " + userInfo.ParkingSlotNumber;
-                    SqlCommand cmd2 = new SqlCommand(query2, con);
+                    string query2 = "UPDATE Customers_Table SET EndTime = CURRENT_TIMESTAMP WHERE ParkingSlotNumber = " + userInfo.ParkingSlotNumber;                    
+                    SqlCommand cmd2 = new SqlCommand(query2, con);    
 
-                    try
-                    {
-                        con.Open();
-                        Int32 rowsAffected = cmd2.ExecuteNonQuery();
-                        Console.WriteLine("RowsAffected: {0}", rowsAffected);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
 
-                    
+                    con.Open();
+                    Int32 rowsAffected = cmd2.ExecuteNonQuery();
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     //cmd.Parameters.AddWithValue("@ParkingSlotNumber", userInfo.ParkingSlotNumber);
@@ -114,6 +105,7 @@ namespace ParkingManagementSystem.Controllers
 
                         string start_time = reader["ParkingTime"].ToString();
                         string end_time = reader["EndTime"].ToString();
+                        
 
                         start_time = start_time.Split(' ')[1];
                         end_time = end_time.Split(' ')[1];
