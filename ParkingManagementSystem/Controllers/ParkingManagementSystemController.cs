@@ -105,10 +105,13 @@ namespace ParkingManagementSystem.Controllers
 
                         string start_time = reader["ParkingTime"].ToString();
                         string end_time = reader["EndTime"].ToString();
-                        
 
-                        start_time = start_time.Split(' ')[1];
-                        end_time = end_time.Split(' ')[1];
+
+                        start_time = start_time.Replace(".", ":");
+                        end_time = end_time.Replace(".", ":");
+
+                        start_time = start_time.Split(' ')[1] + " " + start_time.Split(' ')[2];
+                        end_time = end_time.Split(' ')[1] + " " + end_time.Split(' ')[2];
 
                         TimeSpan duration = DateTime.Parse(end_time).Subtract(DateTime.Parse(start_time));
 
@@ -123,19 +126,19 @@ namespace ParkingManagementSystem.Controllers
 
                             if (h > 1)
                             {
-                                while (h > 0)
+                                while (h >= 0)
                                 {
                                     fare = fare + x * 10;
                                     h--;
                                     x++;
                                 }
                                 
-                                fare = (50 / 100) * fare;
+                                fare = 0.5 * fare;
                             }
                             else
                             {
                                 
-                                fare = (50 / 100) * fare;
+                                fare = 0.5 * fare;
                             }
                         }
 
@@ -146,7 +149,7 @@ namespace ParkingManagementSystem.Controllers
 
                             if (h > 1)
                             {
-                                while (h > 0)
+                                while (h >= 0)
                                 {
                                     fare = fare + x * 5;
                                     h--;
@@ -161,7 +164,7 @@ namespace ParkingManagementSystem.Controllers
                             int x = 0;
                             if (h > 1)
                             {
-                                while (h > 0)
+                                while (h >= 0)
                                 {
                                     fare = fare + x * 10;
                                     h--;
@@ -174,8 +177,15 @@ namespace ParkingManagementSystem.Controllers
                         userInfo.fare = fare;
 
                     }
-                }                   
 
+                    //delete the row here
+
+                    string query3 = "DELETE FROM Customers_Table WHERE ParkingSlotNumber = " + userInfo.ParkingSlotNumber;
+                    SqlCommand cmd3 = new SqlCommand(query3, con);
+                    Int32 rowsAffected2 = cmd3.ExecuteNonQuery();
+
+                }
+              
                 return View("Final", userInfo);
             }
             else

@@ -11,6 +11,7 @@
 <head>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <script language="javascript" type="text/javascript" src="~/Scripts/scipt.js"></script>
     <meta name="viewport" content="width=device-width" />
     <title>Thank you for using the service</title>
     <style>
@@ -19,11 +20,16 @@
         }
     </style>
 </head>
-<body>
+<body onload="remove_tag(@Model.ParkingSlotNumber)">
+    
     <div class="text-center">
-        <h1>Please pay the fare of @Model.fare, @Model.Name</h1>
+        <h1>ParkingSpot = @Model.ParkingSlotNumber</h1>
+        <h1>Customer Name = @Model.Name</h1>
+        <h1>Fare = @Model.fare</h1>
         
+        <button class="btn btn-success" onclick="print_facility()">Print the bill</button>
         
     </div>
+
 </body>
 </html>
