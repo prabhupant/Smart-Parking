@@ -23,7 +23,7 @@ $ git clone https://github.com/prabhupant/Smart-Parking.git
 
 ### Prerequisites 
 
-Change the connection string in ParkingManagementSystemController.cs located at ParkingSpotForm(userInfo, int) function
+Change the connection string in ```ParkingManagementSystemController.cs``` located at ```ParkingSpotForm(userInfo, int)``` function
 
 ```
 string connectionStringADO = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Final Projects\\ParkingManagementSystem\\ParkingManagementSystem\\App_Data\\DatabasePMS.mdf\";Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework";
