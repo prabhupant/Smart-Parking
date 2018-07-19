@@ -21,7 +21,7 @@ $ git clone https://github.com/prabhupant/Smart-Parking.git
 3. Entity Framework
 4. Bootstrap (version 3.0.0 or higher)
 
-### Prerequisites 
+### LocalDB Connection String
 
 Change the connection string in ```ParkingManagementSystemController.cs``` located inside ```ParkingSpotForm(userInfo, int)``` function
 
