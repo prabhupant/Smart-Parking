@@ -29,5 +29,7 @@ namespace ParkingManagementSystem.Models
         //public string ParkingTime { get; set; }
 
         public double fare { get; set; }
+
+        public string SearchMobile { get; set; }
     }
 }

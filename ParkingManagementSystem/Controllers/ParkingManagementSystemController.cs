@@ -194,7 +194,68 @@ namespace ParkingManagementSystem.Controllers
             }
             
         }
+
+        public ViewResult About()
+        {
+            return View();
+        }
+
+        public ViewResult Contact()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ViewResult MobileSearch()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult MobileSearch(UserInfo userInfo)
+        {
+            //if (ModelState.IsValid)
+            //{
+                //string constr = ConfigurationManager.ConnectionStrings["DatabasePMSEntities"].ConnectionString;
+                string connectionStringADO = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Final Projects\\ParkingManagementSystem\\ParkingManagementSystem\\App_Data\\DatabasePMS.mdf\";Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework";
+                using (SqlConnection con = new SqlConnection(connectionStringADO))
+                {
+
+                    //string query = "INSERT INTO Customers_Table(ParkingSlotNumber, Name, Phone, VehicleNumber, UID, ParkingTime) VALUES(@ParkingSlotNumber, @Name, @Phone, @VehicleNumber, @UID, @ParkingTime)";
+                    //string query = "SELECT ParkingTime FROM Customers_Table WHERE ParkingSlotNumber = @ParkingSlotNumber";
+
+                    string query = "SELECT * FROM Customers_Table WHERE Phone = " + userInfo.SearchMobile;
+                    SqlCommand cmd = new SqlCommand(query, con);                
+
+
+                    con.Open();
+                    
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    userInfo.Phone = reader["Phone"].ToString();
+                    userInfo.Name = reader["Name"].ToString();
+                    userInfo.ParkingSlotNumber = Convert.ToInt32(reader["ParkingSlotNumber"]);
+                    userInfo.UID = reader["UID"].ToString();
+                    userInfo.VehicleNumber = reader["VehicleNumber"].ToString();
+                }
+
+
+
+                    //cmd.Parameters.AddWithValue("@ParkingSlotNumber", userInfo.ParkingSlotNumber);
+
+                }
+
+                return View("MobileResult", userInfo);
+            //}
+            //else
+            //{
+                //return View();
+            //}
+        }
+
     }
 
-    
 }
