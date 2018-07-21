@@ -43,11 +43,18 @@
     </header>
 
     <div class="text-center">
-        <h5>Name = @Model.Name</h5>
-        <h5>Parking Spot Number = @Model.ParkingSlotNumber</h5>
-        <h5>Phone = @Model.Phone</h5>
-        <h5>UID = @Model.UID</h5>
-        <h5>Vehicle Number = @Model.VehicleNumber</h5>
+        @if (Model.ParkingSlotNumber > 0)
+        {
+            <h5>Name = @Model.Name</h5>
+            <h5>Parking Spot Number = @Model.ParkingSlotNumber</h5>
+            <h5>Phone = @Model.Phone</h5>
+            <h5>UID = @Model.UID</h5>
+            <h5>Vehicle Number = @Model.VehicleNumber</h5>
+        }
+        else
+        {
+            <h5>Phone number doesn't exist in the database! Please try again.</h5>
+        }
     </div>
 </body>
 </html>

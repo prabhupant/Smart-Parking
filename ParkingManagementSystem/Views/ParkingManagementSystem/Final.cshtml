@@ -54,9 +54,16 @@
     </header>
 
     <div class="text-center">
-        <h1>ParkingSpot = @Model.ParkingSlotNumber</h1>
-        <h1>Customer Name = @Model.Name</h1>
-        <h1>Fare = @Model.fare</h1>
+        @if (Model.fare > 0)
+        {
+            <h1>ParkingSpot = @Model.ParkingSlotNumber</h1>
+            <h1>Customer Name = @Model.Name</h1>
+            <h1>Fare = @Model.fare</h1>
+        }
+        else
+        {
+            <h1>Wrong Parking Slot Number entered! Please try again.</h1>
+        }
 
         <button class="btn btn-success" onclick="print_facility()">Print the bill</button>
 

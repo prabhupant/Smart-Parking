@@ -87,9 +87,11 @@ namespace ParkingManagementSystem.Controllers
 
                     string query = "SELECT * FROM Customers_Table WHERE ParkingSlotNumber = " + userInfo.ParkingSlotNumber;
                     SqlCommand cmd = new SqlCommand(query, con);
+                   
 
                     string query2 = "UPDATE Customers_Table SET EndTime = CURRENT_TIMESTAMP WHERE ParkingSlotNumber = " + userInfo.ParkingSlotNumber;                    
-                    SqlCommand cmd2 = new SqlCommand(query2, con);    
+                    SqlCommand cmd2 = new SqlCommand(query2, con);
+                   
 
 
                     con.Open();
@@ -99,82 +101,89 @@ namespace ParkingManagementSystem.Controllers
                     //cmd.Parameters.AddWithValue("@ParkingSlotNumber", userInfo.ParkingSlotNumber);
 
                     while (reader.Read())
-                    {                        
-                        string name = reader["Name"].ToString();
-                        userInfo.Name = name;                        
-
-                        string start_time = reader["ParkingTime"].ToString();
-                        string end_time = reader["EndTime"].ToString();
-
-
-                        start_time = start_time.Replace(".", ":");
-                        end_time = end_time.Replace(".", ":");
-
-                        start_time = start_time.Split(' ')[1] + " " + start_time.Split(' ')[2];
-                        end_time = end_time.Split(' ')[1] + " " + end_time.Split(' ')[2];
-
-                        TimeSpan duration = DateTime.Parse(end_time).Subtract(DateTime.Parse(start_time));
-
-                        int h = (int)duration.TotalHours;
-
-                        double fare = 0.0;
-
-                        if (userInfo.ParkingSlotNumber >= 1 && userInfo.ParkingSlotNumber <= 10)
+                    {
+                        if (reader.HasRows)
                         {
-                            fare = 20.0;
-                            int x = 0;
+                            string name = reader["Name"].ToString();
+                            userInfo.Name = name;
 
-                            if (h > 1)
+                            string start_time = reader["ParkingTime"].ToString();
+                            string end_time = reader["EndTime"].ToString();
+
+
+                            start_time = start_time.Replace(".", ":");
+                            end_time = end_time.Replace(".", ":");
+
+                            start_time = start_time.Split(' ')[1] + " " + start_time.Split(' ')[2];
+                            end_time = end_time.Split(' ')[1] + " " + end_time.Split(' ')[2];
+
+                            TimeSpan duration = DateTime.Parse(end_time).Subtract(DateTime.Parse(start_time));
+
+                            int h = (int)duration.TotalHours;
+
+                            double fare = 0.0;
+
+                            if (userInfo.ParkingSlotNumber >= 1 && userInfo.ParkingSlotNumber <= 10)
                             {
-                                while (h >= 0)
+                                fare = 20.0;
+                                int x = 0;
+
+                                if (h > 1)
                                 {
-                                    fare = fare + x * 10;
-                                    h--;
-                                    x++;
+                                    while (h >= 0)
+                                    {
+                                        fare = fare + x * 10;
+                                        h--;
+                                        x++;
+                                    }
+
+                                    fare = 0.5 * fare;
                                 }
-                                
-                                fare = 0.5 * fare;
+                                else
+                                {
+
+                                    fare = 0.5 * fare;
+                                }
+                            }
+
+                            else if (userInfo.ParkingSlotNumber >= 11 && userInfo.ParkingSlotNumber <= 20)
+                            {
+                                fare = 10.0;
+                                int x = 0;
+
+                                if (h > 1)
+                                {
+                                    while (h >= 0)
+                                    {
+                                        fare = fare + x * 5;
+                                        h--;
+                                        x++;
+                                    }
+                                }
+
                             }
                             else
                             {
-                                
-                                fare = 0.5 * fare;
-                            }
-                        }
-
-                        else if (userInfo.ParkingSlotNumber >= 11 && userInfo.ParkingSlotNumber <= 20)
-                        {
-                            fare = 10.0;
-                            int x = 0;
-
-                            if (h > 1)
-                            {
-                                while (h >= 0)
+                                fare = 20.0;
+                                int x = 0;
+                                if (h > 1)
                                 {
-                                    fare = fare + x * 5;
-                                    h--;
-                                    x++;
+                                    while (h >= 0)
+                                    {
+                                        fare = fare + x * 10;
+                                        h--;
+                                        x++;
+                                    }
                                 }
+
                             }
-                            
+
+                            userInfo.fare = fare;
                         }
                         else
                         {
-                            fare = 20.0;
-                            int x = 0;
-                            if (h > 1)
-                            {
-                                while (h >= 0)
-                                {
-                                    fare = fare + x * 10;
-                                    h--;
-                                    x++;
-                                }
-                            }
-                            
+                            return View();
                         }
-
-                        userInfo.fare = fare;
 
                     }
 
@@ -234,12 +243,19 @@ namespace ParkingManagementSystem.Controllers
 
                 while (reader.Read())
                 {
+                    if (reader.HasRows)
+                    {
 
-                    userInfo.Phone = reader["Phone"].ToString();
-                    userInfo.Name = reader["Name"].ToString();
-                    userInfo.ParkingSlotNumber = Convert.ToInt32(reader["ParkingSlotNumber"]);
-                    userInfo.UID = reader["UID"].ToString();
-                    userInfo.VehicleNumber = reader["VehicleNumber"].ToString();
+                        userInfo.Phone = reader["Phone"].ToString();
+                        userInfo.Name = reader["Name"].ToString();
+                        userInfo.ParkingSlotNumber = Convert.ToInt32(reader["ParkingSlotNumber"]);
+                        userInfo.UID = reader["UID"].ToString();
+                        userInfo.VehicleNumber = reader["VehicleNumber"].ToString();
+                    }
+                    else
+                    {
+                        return View();
+                    }
                 }
 
 
