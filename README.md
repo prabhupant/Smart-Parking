@@ -21,7 +21,7 @@ $ git clone https://github.com/prabhupant/Smart-Parking.git
 3. Entity Framework
 4. Bootstrap (version 3.0.0 or higher)
 
-### LocalDB Connection String
+[//]: # (### LocalDB Connection String
 
 Change the connection string in ```ParkingManagementSystemController.cs``` located inside ```ParkingSpotForm(userInfo, int)``` function
 
@@ -29,7 +29,7 @@ Change the connection string in ```ParkingManagementSystemController.cs``` locat
 string connectionStringADO = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Final Projects\\ParkingManagementSystem\\ParkingManagementSystem\\App_Data\\DatabasePMS.mdf\";Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework";
 ```
 
-Modify the address ```"C:\\Final Projects\\ParkingManagementSystem\\ParkingManagementSystem\\App_Data\\DatabasePMS.mdf\"``` according to your local repository.
+Modify the address ```"C:\\Final Projects\\ParkingManagementSystem\\ParkingManagementSystem\\App_Data\\DatabasePMS.mdf\"``` according to your local repository.)
 
 ## Contributing
 
