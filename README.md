@@ -1,6 +1,6 @@
 # Smart-Parking
 
-An ASP.NET web application to automate the transactions in a parking system.
+An ASP.NET web application to automate transactions in a parking system.
 
 ## Getting Started
 
@@ -31,4 +31,4 @@ Feel free to pull and push code. Open to pull requests :)
 
 ## Acknowledgments
 
-I blame all of you. Writing this code has been an exercise in sustained suffering. The casual reader may, perhaps, exempt herself from excessive guilt, but for those of you who have played the larger role in prolonging my agonies with your encouragement and support, well…you know who you are, and you owe me.
+I blame all of you. Writing this code has been an exercise in sustained suffering. The casual reader may, perha
