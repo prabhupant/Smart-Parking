@@ -1,6 +1,6 @@
 # Smart-Parking
 
-An ASP.NET web application to automate transactions in a parking system.
+An ASP.NET web application to automate transactions in a parking lot.
 
 ## Getting Started
 
