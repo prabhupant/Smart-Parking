@@ -1,4 +1,5 @@
 # Smart-Parking
+![Smart parking cover image](Smart-Parking-1.jpg)
 
 An ASP.NET web application for automating transactions in a parking lot.
 
